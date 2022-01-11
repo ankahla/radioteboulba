@@ -12,16 +12,16 @@ class NewsCategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i=0; $i < 5; $i++) { 
+        for ($i=0; $i < 5; $i++) {
             DB::table('news_categories')->insert([
               'name' => Str::random(10).'صنف'.$i,
               'slug' => Str::random(2).'_category'.$i,
-              'short_description' => Str::random(10).'ما شاء الله صوت في غاية الروعة والجمال😊😊😊 .',
+              'short_description' => Str::random(10).'ما شاء الله صوت في غاية الروعة والجمال .',
               'color'  =>  rand(1,7),
               'status'  => 1 //rand(1,2),
-              
+
             ] );
-  
+
             }
     }
 }

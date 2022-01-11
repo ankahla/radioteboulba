@@ -12,7 +12,7 @@ class NewsTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i=0; $i < 30; $i++) { 
+        for ($i=0; $i < 30; $i++) {
             DB::table('news')->insert([
                 'category_id' => rand(1,5),
                 'slug' => 'أخبار'.$i,
@@ -22,12 +22,12 @@ class NewsTableSeeder extends Seeder
                         <li>Aliquam tincidunt mauris eu risus.</li>
                         <li>Vestibulum auctor dapibus neque.</li>
                     </ul>",
-               
-                'short_description' => Str::random(10).'ما شاء الله صوت في غاية الروعة والجمال😊😊😊 .',
+
+                'short_description' => Str::random(10).'ما شاء الله صوت في غاية الروعة والجمال .',
                 'status' => rand(1,2),
                 'hot' => rand(0,1),
                 'created_at' =>  DB::raw('now()')
-               
+
             ]);
             }
     }
